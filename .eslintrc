@@ -1,0 +1,33 @@
+{
+	"parser": "babel-eslint",
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"import/no-extraneous-dependencies": 0,
+		"import/no-unresolved": 0,
+		"import/extensions": 0,
+		"class-methods-use-this": 0,
+		"padded-blocks": [2, { "classes": "always" }],
+		"max-len": 0,
+		"indent": [2, "tab", { "SwitchCase": 1 }],
+		"linebreak-style": [1, "unix"],
+		"quotes": [2, "single"],
+		"semi": [2, "always"],
+		"space-in-parens": [2, "always"],
+		"no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+		"no-console": 1,
+		"no-alert": 1,
+		"no-tabs": 0,
+		"no-undefined": 0,
+		"camelcase": 2,
+		"no-unused-vars": 0,
+		"no-underscore-dangle": 0
+	},
+	"globals": {
+		"document": true,
+		"window": true
+	}
+}
