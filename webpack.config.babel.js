@@ -1,6 +1,8 @@
 import path from 'path';
 import webpack from 'webpack';
+import ImageminPlugin from 'imagemin-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const DIST_PATH = path.resolve( './assets/dist/js' );
 
@@ -57,6 +59,13 @@ const config = {
 	plugins: [
 		new webpack.NoEmitOnErrorsPlugin(),
 		new ExtractTextPlugin( '../css/[name].css' ),
+		new CopyWebpackPlugin( [{
+			from: './assets/src/images',
+			to: '../images'
+		}] ),
+		new ImageminPlugin( {
+			test: /\.(jpe?g|png|gif|svg)$/i
+		} )
 	],
 	stats: {
 		colors: true
