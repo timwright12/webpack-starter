@@ -1,7 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const DIST_PATH = path.resolve( './assets/dist/js' );
 
 const config = {
@@ -56,7 +56,7 @@ const config = {
 	mode: 'production',
 	plugins: [
 		new webpack.NoEmitOnErrorsPlugin(),
-		new ExtractTextPlugin( '../css/[name].css' )
+		new ExtractTextPlugin( '../css/[name].css' ),
 	],
 	stats: {
 		colors: true
