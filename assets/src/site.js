@@ -1,5 +1,5 @@
 // CSS imports
-// import './css/project.css';
+import './css/project.css';
 
 // JS imports
 import './js/project.js';
