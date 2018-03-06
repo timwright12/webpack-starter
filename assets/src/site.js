@@ -5,5 +5,5 @@ import './css/project.css';
 import './js/project.js';
 
 // Icons
-// import iconArrowRight from './icons/arrow-right.svg';
+// import symbol from './icons/arrow-right.svg';
 // import iconBroccoli from './icons/broccoli.svg';
