@@ -10,7 +10,7 @@ const SRC_PATH = path.resolve( './assets/src' );
 const config = {
 	cache: true,
 	entry: {
-		site: SRC_PATH + '/site.js'
+		site: SRC_PATH + '/index.js'
 	},
 	output: {
 		path: DIST_PATH,

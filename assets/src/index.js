@@ -1,8 +1,8 @@
 // CSS imports
-import './css/project.css';
+import './main.css';
 
 // JS imports
-import './js/project.js';
+import './main.js';
 
 // Icons
 // import symbol from './icons/arrow-right.svg';
