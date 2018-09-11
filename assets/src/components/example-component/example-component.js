@@ -20,7 +20,7 @@ class Example {
 	/**
 	 * Init function definition
 	 * @param {object} el selector
-	 * @returns {object} The element iteself
+	 * @returns {object} The element itself
 	 */
 	static init( el ) {
 		const elem = document.querySelector( el );
