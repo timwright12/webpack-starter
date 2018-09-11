@@ -1,2 +1,4 @@
 @import url( 'components/base/variables.css' );
 @import url( 'components/base/html.css' );
+
+@import url( 'components/example-component/example-component.css' );

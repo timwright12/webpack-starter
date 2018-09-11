@@ -1,5 +1,9 @@
-function helper() {
-	return 'Compiler is working';
-}
+/**
+ * Import
+ */
+import Example from './components/example-component/example-component';
 
-console.log( helper() );
+/**
+ * Execute
+ */
+Example.init( '#example' );
