@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
-    "watch": "webpack -d --watch"
+    "watch": "webpack -d --watch",
+    "test-a11y": "node tests/accessibility/compliance/pa11y.js"
   },
   "author": "Tim Wright",
   "license": "MIT",
@@ -17,11 +18,13 @@
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
     "browserslist": "^4.1.1",
+    "chalk": "^2.4.1",
     "css-loader": "^1.0.0",
     "cssnano": "^4.1.0",
     "eslint": "^5.5.0",
     "eslint-loader": "^2.1.0",
     "mini-css-extract-plugin": "^0.4.2",
+    "pa11y": "^5.0.4",
     "postcss": "^7.0.2",
     "postcss-custom-media": "^6.0.0",
     "postcss-import": "^12.0.0",
@@ -33,5 +36,19 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.0"
+  },
+  "testing": {
+    "urls": {
+      "local": "http://localhost",
+      "staging": "",
+      "production": ""
+    },
+    "accessibility": {
+      "compliance": "WCAG2AA"
+    }
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "~8.11"
   }
 }
