@@ -4,8 +4,8 @@
 class Example {
 
 	/**
-	 * Constructor function to hold button actions
-	 * @param {object} navButton DOM object
+	 * Constructor function to hold stuff
+	 * @param {object} element DOM object
 	 */
 	constructor( el ) {
 
