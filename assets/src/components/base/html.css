@@ -1,4 +1,4 @@
 body {
-	background: var( --c-black );
-	color: var( --c-white );
+	background: var( --c-white );
+	color: var( --c-black );
 }
