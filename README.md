@@ -5,5 +5,5 @@ Current webpack version: 4.18.*
 ## To Do
 
 - Add image optimization
-- Add SVG Sprites
+- Add support for CSS background images
 - Shed a single tear
