@@ -1,9 +1,10 @@
+/* global require */
+
 // CSS imports
 import './main.css';
 
 // JS imports
 import './main.js';
 
-// Icons
-// import symbol from './icons/arrow-right.svg';
-// import iconBroccoli from './icons/broccoli.svg';
+// Import all icons from assets/icons
+require.context( './icons/', true, /\.svg$/ ).keys().forEach( './icons/', true, /\.svg$/ );
