@@ -62,13 +62,6 @@ const config = {
 				]
 			},
 			{
-				test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-				loader: 'url-loader',
-				options: {
-					limit: 10000
-				}
-			},
-			{
 				test: /assets\/src\/icons\/.*\.svg$/,
 				loader: 'svg-sprite-loader',
 				options: {
@@ -77,12 +70,19 @@ const config = {
 					runtimeCompat: true
 				}
 			},
+			{
+				test: /\.(png|jpg|gif|eot|ttf|woff|woff2)$/,
+				loader: 'url-loader',
+				options: {
+					limit: 10000
+				}
+			},
 		]
 	},
-	mode: 'production',
+	mode: process.env.NODE_ENV,
 	plugins: [
 		new webpack.NoEmitOnErrorsPlugin(),
-		new ExtractTextPlugin( 'css/[name].css' ),
+		new ExtractTextPlugin( '[name].css' ),
 		new SpriteLoaderPlugin({
 			plainSprite: true
 		})
