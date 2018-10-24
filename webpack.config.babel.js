@@ -42,9 +42,10 @@ const config = {
 			{
 				test: /\.css$/,
 				use: [
-					'style-loader',
 					{ loader: ExtractTextPlugin.loader },
-					{ loader: 'css-loader', options: { importLoaders: 1 } },
+					{ loader: 'css-loader', options: { 
+						importLoaders: 1
+					} },
 					{ loader: 'postcss-loader', options: {
 						ident: 'postcss',
 						plugins: () => [
@@ -57,8 +58,7 @@ const config = {
 							} ),
 							require('cssnano')()
 						]
-					} },
-					
+					} }
 				]
 			},
 			{
@@ -77,6 +77,10 @@ const config = {
 					limit: 10000
 				}
 			},
+			{
+				test: /\.(png|jpg|gif)$/,
+				loader: [ 'file-loader' ]
+			}
 		]
 	},
 	mode: process.env.NODE_ENV,

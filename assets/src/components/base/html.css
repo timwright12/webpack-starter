@@ -1,4 +1,11 @@
 body {
-	background: var( --c-white );
+	background-color: var( --c-white );
 	color: var( --c-black );
+}
+
+.icon-broccoli {
+	height: 20px;
+	width: 20px;
+	background: url(icons/broccoli.svg) center;
+	background-size: cover;
 }
