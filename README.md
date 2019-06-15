@@ -1,6 +1,6 @@
 # Webpack Starter
 
-Current webpack version: 4.18.*
+Current webpack version: 4.34.*
 
 ## To Do
 
