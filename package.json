@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
+    "dev": "webpack -d",
     "watch": "webpack -d --watch",
     "test-a11y": "node tests/accessibility/compliance/pa11y.js",
     "test:visual-init": "pushd tests/visual/ && backstop init && rm backstop.json && popd",
