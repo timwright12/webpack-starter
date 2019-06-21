@@ -45,7 +45,8 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "webfontloader": "^1.6.28"
   },
   "browserslist": [
     "last 2 versions",
