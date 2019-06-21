@@ -24,6 +24,7 @@
     "babel-loader": "^8.0.6",
     "backstopjs": "^4.1.9",
     "browserslist": "^4.6.2",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^3.0.0",
     "cssnano": "^4.1.10",
     "eslint": "^5.16.0",

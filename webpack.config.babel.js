@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'mini-css-extract-plugin';
 import postcssPresetEnv from 'postcss-preset-env';
 import SpriteLoaderPlugin from 'svg-sprite-loader/plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 const DIST_PATH = path.resolve( './dist' );
 
@@ -48,17 +49,17 @@ const config = {
 					{ loader: 'postcss-loader', options: {
 						ident: 'postcss',
 						plugins: () => [
-							require('postcss-import')(),
+							require( 'postcss-import' )(),
 							postcssPresetEnv( {
 								stage: 0,
 								autoprefixer: {
 									grid: true
 								}
 							} ),
-							require('cssnano')()
+							require( 'cssnano' )()
 						]
 					} },
-					
+
 				]
 			},
 			{
@@ -69,12 +70,19 @@ const config = {
 					spriteFilename: './icons/svg-defs.svg',
 					runtimeCompat: true
 				}
-			},
-			{
-				test: /\.(png|jpg|gif|eot|ttf|woff|woff2)$/,
+			}, {
+				test: /\.(png|jpg|gif|svg)$/,
 				loader: 'url-loader',
 				options: {
-					limit: 10000
+					limit: 10000,
+					name: 'images/[hash].[ext]'
+				}
+			}, {
+				test: /\.(eot|ttf|woff|woff2)$/,
+				loader: 'url-loader',
+				options: {
+					limit: 10000,
+					name: 'fonts/[hash].[ext]'
 				}
 			},
 		]
@@ -83,9 +91,13 @@ const config = {
 	plugins: [
 		new webpack.NoEmitOnErrorsPlugin(),
 		new ExtractTextPlugin( '[name].css' ),
-		new SpriteLoaderPlugin({
+		new SpriteLoaderPlugin( {
 			plainSprite: true
-		})
+		} ),
+		new CopyPlugin( [
+			{ from: './src/images', to: './images' },
+			{ from: './src/icons', to: './icons' },
+		] ),
 	],
 	stats: {
 		colors: true
