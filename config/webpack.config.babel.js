@@ -61,15 +61,6 @@ const config = {
 					} },
 
 				]
-			},
-			{
-				test: /src\/icons\/.*\.svg$/,
-				loader: 'svg-sprite-loader',
-				options: {
-					extract: true,
-					spriteFilename: './icons/svg-defs.svg',
-					runtimeCompat: true
-				}
 			}, {
 				test: /\.(png|jpg|gif|svg)$/,
 				loader: 'url-loader',
@@ -84,7 +75,15 @@ const config = {
 					limit: 10000,
 					name: 'fonts/[hash].[ext]'
 				}
-			},
+			}, {
+				test: /src\/icons\/.*\.svg$/,
+				loader: 'svg-sprite-loader',
+				options: {
+					extract: true,
+					spriteFilename: './icons/svg-defs.svg',
+					runtimeCompat: true
+				}
+			}
 		]
 	},
 	mode: process.env.NODE_ENV,

@@ -4,9 +4,9 @@
   "description": "A test project for Min Webpack",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
-    "dev": "webpack -d",
-    "watch": "webpack -d --watch",
+    "build": "webpack -p --config config/webpack.config.babel.js",
+    "dev": "webpack -d --config config/webpack.config.babel.js",
+    "watch": "webpack -d --watch --config config/webpack.config.babel.js",
     "test-a11y": "node tests/accessibility/compliance/pa11y.js",
     "test:visual-init": "pushd tests/visual/ && backstop init && rm backstop.json && popd",
     "test:visual-reference": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js reference --config=index.js && popd",
@@ -47,6 +47,12 @@
     "lodash.debounce": "^4.0.8",
     "normalize.css": "^8.0.1"
   },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "maintained node versions",
+    "IE 11"
+  ],
   "testing": {
     "urls": {
       "home": "http://localhost:8000"
