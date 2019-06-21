@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A test project for Min Webpack",
   "main": "index.js",
+  "jest": {
+    "preset": "jest-puppeteer"
+  },
   "scripts": {
     "build": "webpack -p --config config/webpack.config.babel.js",
     "dev": "webpack -d --config config/webpack.config.babel.js",
@@ -11,7 +14,8 @@
     "test:visual-init": "pushd tests/visual/ && backstop init && rm backstop.json && popd",
     "test:visual-reference": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js reference --config=index.js && popd",
     "test:visual": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js test --config=index.js && popd",
-    "test:visual-approve": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js approve --config=index.js && popd"
+    "test:visual-approve": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js approve --config=index.js && popd",
+    "test:e2e": "jest"
   },
   "author": "Tim Wright",
   "license": "MIT",
@@ -31,12 +35,15 @@
     "eslint-loader": "^2.1.2",
     "file-loader": "^4.0.0",
     "image-webpack-loader": "^5.0.0",
+    "jest": "^24.8.0",
+    "jest-puppeteer": "^4.2.0",
     "mini-css-extract-plugin": "^0.7.0",
     "postcss": "^7.0.17",
     "postcss-custom-media": "^7.0.8",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.6.0",
+    "puppeteer": "^1.18.0",
     "style-loader": "^0.23.1",
     "svg-sprite-loader": "^4.1.6",
     "url-loader": "^2.0.0",
