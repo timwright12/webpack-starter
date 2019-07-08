@@ -1,4 +1,52 @@
 body {
 	background: var( --c-white );
 	color: var( --c-black );
+	font-size: 1em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+h1, h2 {
+	margin-bottom: .5em;
+}
+
+h1, h2, h3 {
+	line-height: 1.1;
+}
+
+h1 {
+	font-size: var(--fz-xlarge);
+}
+
+h2 {
+	font-size: var(--fz-large);
+}
+
+h3 {
+ 	font-size: var(--fz-medium);
+	margin-bottom: .75em;
+}
+
+h4 {
+	font-size: var(--fz-small);
+}
+
+h5 {
+	font-size: var(--fz-xsmall);
+	font-weight: 700;
+}
+
+h6, small, figcaption {
+	font-size: var(--fz-tiny);
+}
+
+p, ul, ol {
+	font-size: var(--fz-xsmall);
+	margin: 0 0 1em;
 }
