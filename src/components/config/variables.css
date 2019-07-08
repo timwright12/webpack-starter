@@ -4,6 +4,15 @@
 	--c-black: #000;
 	--c-white: #FFF;
 	
+	/* Diatonic Typographic Scale */
+	--fz-tiny: 0.875em; /* 14px */
+	--fz-xsmall: 1.125em; /* 18px */
+	--fz-small: 1.25em; /* 20px */
+	--fz-medium: 1.5em; /* 24px */
+	--fz-large: 2.25em; /* 36px */
+	--fz-xlarge: 3em; /* 48px */;
+	--fz-huge: 4em; /* 64px */
+	
 	/* Breakpoints */
 	@custom-media --bp-tiny ( min-width: 25em ); /* 400px */
 	@custom-media --bp-small ( min-width: 40.625em ); /* 650px */
