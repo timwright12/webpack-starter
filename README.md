@@ -28,5 +28,5 @@ npm run test:visual-approve
 ### Accessibility
 
 ```
-npm run test-a11y
+npm run test:a11y
 ```

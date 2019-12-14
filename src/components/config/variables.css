@@ -1,9 +1,19 @@
 :root {
-	
+
 	/* Colors */
 	--c-black: #000;
 	--c-white: #FFF;
-	
+
+	/* A "Perfect Forth" Scale */
+	--fz-tiny: 0.75em; /* 12px */
+	--fz-xsmall: 1em; /* 16px */
+	--fz-small: 1.333em; /* 21.28px */
+	--fz-medium: 1.777em; /* 28.32px */
+	--fz-large: 2.369em; /* 37.904px */
+	--fz-xlarge: 3.157em; /* 50.512px */;
+	--fz-huge: 4.209em; /* 67.344px */
+	--fz-gigantic: 5.61em; /* 89.76px */
+
 	/* Breakpoints */
 	@custom-media --bp-tiny ( min-width: 25em ); /* 400px */
 	@custom-media --bp-small ( min-width: 40.625em ); /* 650px */
@@ -11,4 +21,3 @@
 	@custom-media --bp-large ( min-width: 62.5em ); /* 1000px */
 
 }
-
