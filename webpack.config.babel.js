@@ -1,6 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
-import ExtractTextPlugin from 'mini-css-extract-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import postcssPresetEnv from 'postcss-preset-env';
 import SpriteLoaderPlugin from 'svg-sprite-loader/plugin';
 import CopyPlugin from 'copy-webpack-plugin';
@@ -8,6 +8,9 @@ import CopyPlugin from 'copy-webpack-plugin';
 const DIST_PATH = path.resolve( './dist' );
 
 const config = {
+	node: {
+		fs: 'empty'
+	},
 	cache: true,
 	entry: {
 		index: './src/index.js',
@@ -34,17 +37,13 @@ const config = {
 				test: /\.js$/,
 				use: [{
 					loader: 'babel-loader',
-					options: {
-						babelrc: true,
-					}
-
 				}]
 			},
 			{
 				test: /\.css$/,
 				use: [
 					'style-loader',
-					{ loader: ExtractTextPlugin.loader },
+					{ loader: MiniCssExtractPlugin.loader },
 					{ loader: 'css-loader', options: { importLoaders: 1 } },
 					{ loader: 'postcss-loader', options: {
 						ident: 'postcss',
@@ -89,7 +88,11 @@ const config = {
 	mode: process.env.NODE_ENV,
 	plugins: [
 		new webpack.NoEmitOnErrorsPlugin(),
-		new ExtractTextPlugin( '[name].css' ),
+		new MiniCssExtractPlugin({
+	      filename: '[name].css',
+	      chunkFilename: '[id].css',
+	      ignoreOrder: false,
+	    }),
 		new SpriteLoaderPlugin( {
 			plainSprite: true
 		} ),

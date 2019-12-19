@@ -16,12 +16,12 @@
     "no-alert": [ 1 ],
     "camelcase": [ 2 ],
     "require-jsdoc": [ 2, {
-      "require" : { 
+      "require" : {
         "FunctionDeclaration" : true,
         "MethodDefinition" : true,
         "ClassDeclaration" : true,
         "ArrowFunctionExpression" : true,
-        "FunctionExpression" : true 
+        "FunctionExpression" : true
       }
     }]
   }
