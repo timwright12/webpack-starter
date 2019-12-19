@@ -1,7 +1,7 @@
 body {
 	background: var( --c-white );
 	color: var( --c-black );
-	font-size: 1em;
+	font-size: var( --fz-xsmall );
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

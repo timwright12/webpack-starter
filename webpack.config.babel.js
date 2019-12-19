@@ -8,6 +8,9 @@ import CopyPlugin from 'copy-webpack-plugin';
 const DIST_PATH = path.resolve( './dist' );
 
 const config = {
+	node: {
+		fs: 'empty'
+	},
 	cache: true,
 	entry: {
 		index: './src/index.js',
