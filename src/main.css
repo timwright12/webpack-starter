@@ -2,5 +2,4 @@
 
 @import url( "components/config/variables.css" );
 @import url( "components/base/html.css" );
-@import url( "components/base/grid.css" );
 @import url( "components/example-component/example-component.css" );
