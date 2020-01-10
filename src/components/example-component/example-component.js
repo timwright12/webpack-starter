@@ -1,6 +1,3 @@
-// If you need debounce; if not, don't leave this in - it's just an example
-import debounce from 'lodash.debounce'; 
-
 /**
  * Example class component
  */
@@ -17,7 +14,6 @@ class Example {
 		if ( el ) {
 			console.log( el );
 			console.log( self );
-			console.log( debounce );
 		}
 	}
 
