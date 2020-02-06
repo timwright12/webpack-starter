@@ -1,6 +1,6 @@
 # Webpack Starter
 
-Current webpack version: 4.34.*
+Current webpack version: 4.41.*
 
 ## Installation
 ```
