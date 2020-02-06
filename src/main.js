@@ -2,15 +2,28 @@
  * Import
  */
 import WebFont from 'webfontloader';
-import Example from './components/example-component/example-component';
+import ExampleClass from './components/example-class/example-class';
+import exampleFunction from './components/example-function/example-function';
+import exampleScopedFunction from './components/example-scoped/example-scoped';
 
 /**
- * Execute
+ * Execute functions and methods on DOM ready
  */
-Example.init( '#example' );
+document.addEventListener( 'DOMContentLoaded', () => {
 
-WebFont.load( {
-	google: {
-		families: ['Open Sans']
-	}
+	// Example call if using a class
+	ExampleClass.init( '#example' );
+
+	// Example call if using a scoped method
+	exampleScopedFunction.nestedMethod();
+
+	// Normal imported function call
+	exampleFunction();
+
+	WebFont.load( {
+		google: {
+			families: ['Open Sans']
+		}
+	} );
+
 } );
