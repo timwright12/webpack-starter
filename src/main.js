@@ -11,15 +11,16 @@ import exampleScopedFunction from './components/example-scoped/example-scoped';
  */
 document.addEventListener( 'DOMContentLoaded', () => {
 
-	// Example call if using a class
-	ExampleClass.init( '#example' );
-
 	// Example call if using a scoped method
 	exampleScopedFunction.nestedMethod();
 
 	// Normal imported function call
 	exampleFunction();
 
+	// Example call if using a class
+	ExampleClass.init( '#example' );
+	
+	// Example third party code execution
 	WebFont.load( {
 		google: {
 			families: ['Open Sans']
