@@ -12,7 +12,9 @@
     "test:visual-reference": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js reference --config=index.js && popd",
     "test:visual": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js test --config=index.js && popd",
     "test:visual-approve": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js approve --config=index.js && popd",
-    "test": "jest && npm run test:a11y"
+    "test": "jest && npm run test:a11y",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Tim Wright",
   "license": "MIT",
@@ -20,6 +22,7 @@
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "@babel/register": "^7.7.4",
+    "@storybook/html": "^5.3.19",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
