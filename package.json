@@ -14,7 +14,7 @@
     "test:visual-approve": "pushd tests/visual/ && ../../node_modules/backstopjs/cli/index.js approve --config=index.js && popd",
     "test": "jest && npm run test:a11y",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook-build": "build-storybook"
   },
   "author": "Tim Wright",
   "license": "MIT",
